@@ -1,0 +1,13 @@
+
+
+@startuml
+Start
+:User asks to find a book;
+:Enter the title of the book;
+if (Book found?) then (Yes)
+   :Show book information;
+else (No)
+   :Show message "Book not found";
+endif
+Stop
+@enduml

@@ -1,0 +1,38 @@
+@startuml
+actor User
+participant "Bibliotheekservice" as BibService
+
+User -> BibService: Select book management function
+activate BibService
+BibService -> BibService: Check selected function
+alt Move book to another category
+  BibService -> User: Select book to move
+  BibService -> User: Select target category
+  BibService -> BibService: Move book to target category
+  BibService -> User: Notify about successful move
+else Restore book
+  BibService -> User: Select book to restore
+  BibService -> BibService: Check book condition
+  alt Book condition is restoreable
+    BibService -> BibService: Restore book
+    BibService -> User: Notify about successful restoration
+  else Book condition is not restoreable
+    BibService -> User: Notify about inability to restore book
+  end
+else Add book information
+  BibService -> User: Select book to add information to
+  BibService -> User: Provide additional information
+  BibService -> BibService: Update book information in database
+  BibService -> User: Notify about successful update
+else Mark book
+  BibService -> User: Select book to mark
+  BibService -> BibService: Mark book with library stamp
+  BibService -> User: Notify about successful marking
+else Calculate book popularity
+  BibService -> BibService: Calculate popularity of each book
+  BibService -> User: Display popularity ranking of books
+else Invalid selection
+  BibService -> User: Notify about invalid selection
+end
+deactivate BibService
+@enduml

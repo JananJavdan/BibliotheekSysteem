@@ -1,0 +1,35 @@
+@startuml
+
+actor User
+
+note over User: User enters book title and author for removal
+User -> System: Remove Book request
+activate System
+
+alt Both title and author provided
+  System -> Database: Check if book exists
+  activate Database
+    Database --> System: Exist
+  deactivate Database
+
+  System -> Database: Retrieve book information
+  activate Database
+    Database --> System: Book information
+  deactivate Database
+
+  System --> User: Display book information for removal
+  User -> System: Confirm removal
+  System -> Database: Remove book
+  activate Database
+    Database --> System: Book removed successfully
+  deactivate Database
+
+  System --> User: Display success message
+else Either title or author is missing
+  System --> User: Display error message
+end
+
+User -> System: Logout request
+deactivate System
+
+@enduml

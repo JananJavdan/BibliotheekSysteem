@@ -1,0 +1,19 @@
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+
+activate User
+User -> LibrarySystem: Click on "Login"
+activate Librarysystem
+
+LibrarySystem -> LibrarySystem: Enter username and password
+     alt (Login details correct?)
+     Librarysystem -> User: User logged in
+     LibrarySystem -> User: Show welcome message
+else (No)
+     Librarysystem -> User: Show error message "Incorrect login details"
+end
+
+deactivate Librarysystem
+deactivate User
+@enduml

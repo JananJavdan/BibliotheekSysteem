@@ -1,0 +1,19 @@
+@startuml
+actor User
+participant "Bibliotheekservice" as BibService
+
+User -> BibService: Request registration
+activate BibService
+BibService -> BibService: Check if user is already registered
+alt User not registered
+  BibService -> User: Prompt to provide registration details
+  activate User
+  User -> BibService: Provide registration details
+  BibService -> BibService: Create user account
+  BibService -> User: Notify about successful registration
+  deactivate User
+else User already registered
+  BibService -> User: Notify about existing account
+end
+deactivate BibService
+@enduml

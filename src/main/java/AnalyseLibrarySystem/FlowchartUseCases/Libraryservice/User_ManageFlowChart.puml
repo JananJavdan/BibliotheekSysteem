@@ -1,0 +1,31 @@
+@startuml
+start
+:User selects user management function;
+if (Selected function is Enroll new user?) then (yes)
+  :User provides user details;
+  :Add user to database;
+  :Notify user about successful enrollment;
+elseif (Selected function is Remove user?) then (yes)
+  :User selects user to remove;
+  :Confirm removal;
+  :Remove user from database;
+  :Notify user about successful removal;
+elseif (Selected function is Block user?) then (yes)
+  :User selects user to block;
+  :Confirm blocking;
+  :Block user account;
+  :Notify user about successful blocking;
+elseif (Selected function is Freeze subscription?) then (yes)
+  :User selects user to freeze subscription;
+  :Confirm freezing;
+  :Freeze user's subscription;
+  :Notify user about successful freezing;
+elseif (Selected function is Reset password?) then (yes)
+  :User selects user to reset password;
+  :Reset user's password;
+  :Notify user about successful password reset;
+else
+  :Notify user about invalid selection;
+endif
+stop
+@enduml

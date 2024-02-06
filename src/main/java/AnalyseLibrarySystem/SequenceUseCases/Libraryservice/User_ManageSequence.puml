@@ -1,0 +1,35 @@
+@startuml
+actor User
+participant "Bibliotheekservice" as BibService
+
+User -> BibService: Select user management function
+activate BibService
+BibService -> BibService: Check selected function
+alt Enroll new user
+  BibService -> User: Provide user details
+  BibService -> BibService: Add user to database
+  BibService -> User: Notify about successful enrollment
+else Remove user
+  BibService -> User: Select user to remove
+  BibService -> User: Confirm removal
+  BibService -> BibService: Remove user from database
+  BibService -> User: Notify about successful removal
+else Block user
+  BibService -> User: Select user to block
+  BibService -> User: Confirm blocking
+  BibService -> BibService: Block user account
+  BibService -> User: Notify about successful blocking
+else Freeze subscription
+  BibService -> User: Select user to freeze subscription
+  BibService -> User: Confirm freezing
+  BibService -> BibService: Freeze user's subscription
+  BibService -> User: Notify about successful freezing
+else Reset password
+  BibService -> User: Select user to reset password
+  BibService -> BibService: Reset user's password
+  BibService -> User: Notify about successful password reset
+else Invalid selection
+  BibService -> User: Notify about invalid selection
+end
+deactivate BibService
+@enduml

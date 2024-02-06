@@ -1,0 +1,19 @@
+@startuml
+start
+:User requests to add a new book;
+if (Is user authenticated?) then (yes)
+  :Prompt user to enter book details;
+  :Add book to database;
+  :Notify user about successful addition;
+else (no)
+  :Prompt user to log in;
+  if (Is login successful?) then (yes)
+    :Prompt user to enter book details;
+    :Add book to database;
+    :Notify user about successful addition;
+  else (no)
+    :Notify user about authentication failure;
+  endif
+endif
+stop
+@enduml

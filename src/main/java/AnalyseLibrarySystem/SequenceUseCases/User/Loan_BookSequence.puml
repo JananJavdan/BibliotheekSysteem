@@ -1,0 +1,26 @@
+
+
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+
+activate User
+User -> LibrarySystem: Asks to borrow a book
+activate Librarysystem
+
+LibrarySystem -> LibrarySystem: Checks if book is available
+alt Book available? (yes)
+     Librarysystem -> Librarysystem: Borrow a book
+     Librarysystem -> Librarysystem: Loan book to user
+     alt (Successful?)
+         Librarysystem -> User: Message "Book checked out successfully"
+     else (no)
+         Librarysystem -> User: Message "Book could not be checked out"
+     end
+else (no)
+     LibrarySystem -> User: "Book Not Available" Message
+end
+
+deactivate Librarysystem
+deactivate User
+@enduml

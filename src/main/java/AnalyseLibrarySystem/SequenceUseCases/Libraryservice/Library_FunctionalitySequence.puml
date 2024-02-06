@@ -1,0 +1,68 @@
+@startuml
+actor User
+participant "Bibliotheekservice" as BibService
+
+User -> BibService: Select library functionality
+activate BibService
+BibService -> BibService: Check selected function
+alt Search for book
+  BibService -> User: Prompt to enter search criteria
+  loop until criteria entered
+    User -> BibService: Enter search criteria
+  end
+  BibService -> User: Display search results
+else Borrow book
+  BibService -> User: Select book to borrow
+  BibService -> BibService: Check availability
+  alt Book available
+    BibService -> User: Confirm borrowing
+  else Book unavailable
+    BibService -> User: Notify about unavailability
+  end
+else Return book
+  BibService -> User: Select book to return
+  BibService -> BibService: Check if book is borrowed by user
+  alt Book borrowed by user
+    BibService -> User: Confirm return
+  else Book not borrowed by user
+    BibService -> User: Notify about incorrect selection
+  end
+else View account
+  BibService -> User: return user account details
+else View library statistics
+  BibService -> User: return library statistics
+else Rate book
+  BibService -> User: Select book to rate
+  BibService -> User: Prompt to enter rating
+  User -> BibService: Enter rating
+  BibService -> BibService: Update book rating
+  BibService -> User: Notify about successful rating
+else Subscribe to newsletter
+  BibService -> User: Prompt to enter email address
+  BibService -> BibService: Add user to subscribers list
+  BibService -> User: Confirm subscription
+else Pay subscription fee
+  BibService -> User: Prompt to pay subscription fee
+  BibService -> BibService: Update user's subscription status
+  BibService -> User: Notify about successful payment
+else Pay fine for damaged book
+  BibService -> User: Prompt to pay fine for damaged book
+  BibService -> BibService: Update user's fine status
+  BibService -> User: Notify about successful payment
+else Pay fine for lost book
+  BibService -> User: Prompt to pay fine for lost book
+  BibService -> BibService: Update user's fine status
+  BibService -> User: Notify about successful payment
+else Sort books
+  BibService -> User: Prompt to select sorting criteria
+  User -> BibService: Select sorting criteria
+  BibService -> BibService: Sort books
+  BibService -> User: return sorted list of books
+else Sort clients by age
+  BibService -> BibService: Sort clients by age
+  BibService -> User: return sorted list of clients
+else Invalid selection
+  BibService -> User: Notify about invalid selection
+end
+deactivate BibService
+@enduml

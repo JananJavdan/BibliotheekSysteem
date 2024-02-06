@@ -1,0 +1,41 @@
+
+@startuml
+Start
+:User clicks "Login";
+:Enter username and password;
+if (Login details correct?) then (Yes)
+   :User logged in;
+   :Show welcome message;
+else (No)
+   :Show error message "Incorrect login details";
+endif
+Stop
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

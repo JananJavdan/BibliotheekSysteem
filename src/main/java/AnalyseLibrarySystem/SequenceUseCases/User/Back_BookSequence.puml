@@ -1,0 +1,25 @@
+
+
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+
+activate User
+User -> LibrarySystem: Requests to return a book
+activate Librarysystem
+
+Librarysystem -> Librarysystem: Scan the book to be returned
+alt (Book correct?) then (Yes)
+     Librarysystem -> Librarysystem: Return book
+     alt (Successful?) then (Yes)
+         LibrarySystem -> User: "Book Returned Successfully" Message
+     else (No)
+         LibrarySystem -> User: "Book could not be returned" message
+     end
+else (No)
+     LibrarySystem -> User: "Invalid Book" Message
+end
+
+deactivate Librarysystem
+deactivate User
+@enduml

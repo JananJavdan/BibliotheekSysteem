@@ -1,0 +1,28 @@
+@startuml
+
+actor User
+
+note over User: User enters book title and author
+User -> System: Add Book request
+activate System
+
+alt Both title and author provided
+  System -> Database: Check if book exists
+  activate Database
+    Database --> System: Not exist
+  deactivate Database
+
+  System -> Database: Add book
+  activate Database
+    Database --> System: Book added successfully
+  deactivate Database
+
+  System --> User: Display success message
+else Either title or author is missing
+  System --> User: Display error message
+end
+
+User -> System: Logout request
+deactivate System
+
+@enduml
