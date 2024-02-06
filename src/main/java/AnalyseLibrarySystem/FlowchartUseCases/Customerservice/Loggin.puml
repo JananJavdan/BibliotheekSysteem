@@ -1,10 +1,10 @@
 
 @startuml
 Start
-:User clicks "Login";
+:Administrator clicks "Login";
 :Enter username and password;
 if (Login details correct?) then (Yes)
-   :User logged in;
+   :Administrator logged in;
    :Show welcome message;
 else (No)
    :Show error message "Incorrect login details";

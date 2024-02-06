@@ -1,18 +1,18 @@
 @startuml
 start
-:User requests to add a new book;
-if (Is user authenticated?) then (yes)
-  :Prompt user to enter book details;
+:SystemService requests to add a new book;
+if (Is SystemService authenticated?) then (yes)
+  :Prompt SystemService to enter book details;
   :Add book to database;
-  :Notify user about successful addition;
+  :Notify SystemService about successful addition;
 else (no)
-  :Prompt user to log in;
+  :Prompt SystemService to log in;
   if (Is login successful?) then (yes)
-    :Prompt user to enter book details;
+    :Prompt SystemService to enter book details;
     :Add book to database;
-    :Notify user about successful addition;
+    :Notify SystemService about successful addition;
   else (no)
-    :Notify user about authentication failure;
+    :Notify SystemService about authentication failure;
   endif
 endif
 stop

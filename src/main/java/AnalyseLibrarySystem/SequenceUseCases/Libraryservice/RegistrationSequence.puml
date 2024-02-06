@@ -1,19 +1,19 @@
 @startuml
-actor User
+actor SystemService
 participant "Bibliotheekservice" as BibService
 
-User -> BibService: Request registration
+SystemService -> BibService: Request registration
 activate BibService
 BibService -> BibService: Check if user is already registered
-alt User not registered
-  BibService -> User: Prompt to provide registration details
-  activate User
-  User -> BibService: Provide registration details
+alt SystemService not registered
+  BibService -> SystemService: Prompt to provide registration details
+  activate SystemService
+  SystemService -> BibService: Provide registration details
   BibService -> BibService: Create user account
-  BibService -> User: Notify about successful registration
-  deactivate User
-else User already registered
-  BibService -> User: Notify about existing account
+  BibService -> SystemService: Notify about successful registration
+  deactivate SystemService
+else SystemService already registered
+  BibService -> SystemService: Notify about existing account
 end
 deactivate BibService
 @enduml

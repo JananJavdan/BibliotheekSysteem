@@ -1,0 +1,44 @@
+@startuml
+left to right direction
+
+package "Library System" {
+    package "User" {
+        class User {
+            - username: String
+            - password: String
+            + login(): boolean
+            + searchBook(title: String): Book
+            + returnBook(book: Book): boolean
+            + borrowBook(book: Book): boolean
+        }
+    }
+
+    package "CustomerService" {
+        class CustomerService {
+            - adminUsername: String
+            - adminPassword: String
+            + login(): boolean
+            + editBookInformation(title: String, author: String): boolean
+            + addBook(title: String, author: String): boolean
+            + deleteBook(title: String, author: String): boolean
+        }
+    }
+
+    package "LibraryService" {
+        class LibraryService {
+            - systemUsername: String
+            - systemPassword: String
+            + login(): boolean
+            + manageBook(book: Book): boolean
+            + manageUser(user: User): boolean
+            + registerUser(userInfo: UserInfo): boolean
+        }
+    }
+
+    class Book {
+        - title: String
+        - author: String
+        - category: String
+        - condition: String
+    }
+    @enduml

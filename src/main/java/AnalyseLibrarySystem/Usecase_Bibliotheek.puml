@@ -1,123 +1,62 @@
 @startuml
 left to right direction
 
-package "Bibliotheeksysteem" {
-  rectangle "Gebruiker" as gebruiker {
-    :user:
+package "Library System" {
+  rectangle "User" as user {
+   :user1:
   }
-  rectangle "Gebruikscases" as usecases {
-    (Boek Zoeken) as zoek
-    (Boek terugkrijgen) as terugkrijgen
-    (Boek Lening) as lening
-    (Inloggen) as gebruikerInloggen
-    (Abbonement) as (abbonment)
+  rectangle "Userscases" as usecases {
+    (Search Book) as search
+    (Back Book) as back
+    (Loan Book) as loen
+    (Loggin) as userloggin
+    (Subscribtion) as (subscribtion)
 
   }
-  gebruiker ---> (zoek)
-  gebruiker --->(terugkrijgen)
-  gebruiker ---> (lening)
-  gebruiker ---> (gebruikerInloggen)
-  gebruiker ---> (abbonment)
+  user ---> (search)
+  user --->(back)
+  user ---> (loen)
+  user ---> (userloggin)
+  user ---> (subscribtion)
 
-  rectangle "Klantenservice" as klantenservice {
-      :klantenservice1:
+  rectangle "CostomerService" as customerservice {
+      :customerservice1:
     }
 
-    rectangle "Gebruikscases" as usecases {
+    rectangle "Userscases" as usecases {
 
-      (Boek Informatie Bewerken) as boekinformatiebewerken
-      (Boek Toevoegen) as toevoegen
-      (Boek verdewijnen) as verdewijnen
+      (Edite Book Information) as (editebookinformation)
+      (Add Book) as addbook
+      (Delete Book) as deletebook
+
 
     }
 
-    klantenservice ---> (gebruikerInloggen)
-    klantenservice ---> (boekinformatiebewerken)
-    klantenservice ---> (toevoegen)
-    klantenservice --->  (verdewijnen)
+    customerservice ---> (userloggin)
+    customerservice ---> (editebookinformation)
+    customerservice ---> (addbook)
+    customerservice --->  (deletebook)
 
 
-rectangle "Bibliotheekservice" as bibliotheekservice {
-    :service:
+rectangle "LibraryService" as libraryservice {
+    :systemservice:
   }
 
-  rectangle "Gebruikscases" as usecases {
-    (Boek beheren) as (boekbeheren)
-    (Gebruikers Beheren) as gebruikerbeheren
-     (Registratie) as (registratie)
-     (Bibliotheek Functionaliteit) as functionaliteit
+  rectangle "Userscases" as usecases {
+
+    (Book Manage) as (bookmanage)
+    (User Manage) as (usermanage)
+     (Registration) as (registration)
+     (Library Functionality) as (libraryfunctionality)
+
 
   }
-  bibliotheekservice ---> (registratie)
+  libraryservice ---> (registration)
 
-  bibliotheekservice ---> (boekbeheren)
-  bibliotheekservice ---> (gebruikerbeheren)
-  bibliotheekservice ---> (functionaliteit)
+  libraryservice ---> (bookmanage)
+  libraryservice ---> (usermanage)
+  libraryservice ---> (libraryfunctionality)
 
 @enduml
-@startuml
-left to right direction
-
-package "Bibliotheeksysteem" {
-  rectangle "Gebruiker" as gebruiker {
-    :user:
-  }
-
-  rectangle "Gebruikscases" as usecases {
-    (Boek Zoeken) as zoek
-    (Boek terugkrijgen) as terugkrijgen
-    (Boek Lening) as lening
-    (Inloggen) as gebruikerInloggen
-    (Abbonement) as (abbonment)
-
-  }
-
-  gebruiker ---> (zoek)
-  gebruiker --->(terugkrijgen)
-  gebruiker ---> (lening)
-  gebruiker ---> (gebruikerInloggen)
-  gebruiker ---> (abbonment)
 
 
-
-
-  rectangle "Klantenservice" as klantenservice {
-      :klantenservice1:
-    }
-
-    rectangle "Gebruikscases" as usecases {
-
-      (Boek Informatie Bewerken) as boekinformatiebewerken
-      (Boek Toevoegen) as toevoegen
-      (Boek verdewijnen) as verdewijnen
-
-
-    }
-
-    klantenservice ---> (gebruikerInloggen)
-    klantenservice ---> (boekinformatiebewerken)
-    klantenservice ---> (toevoegen)
-    klantenservice --->  (verdewijnen)
-
-
-rectangle "Bibliotheekservice" as bibliotheekservice {
-    :service:
-  }
-
-  rectangle "Gebruikscases" as usecases {
-
-    (Boek beheren) as (boekbeheren)
-    (Gebruikers Beheren) as gebruikerbeheren
-     (Registratie) as (registratie)
-     (Bibliotheek Functionaliteit) as functionaliteit
-
-  }
-
-  bibliotheekservice ---> (registratie)
-
-  bibliotheekservice ---> (boekbeheren)
-  bibliotheekservice ---> (gebruikerbeheren)
-  bibliotheekservice ---> (functionaliteit)
-
-
-@enduml

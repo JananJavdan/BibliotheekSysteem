@@ -1,10 +1,10 @@
 @startuml
-actor User
+actor Administrartor
 participant System
 database Database
 
-note over User: User enters book title and author for editing
-User -> System: Edit Book Information request
+note over Administrartor: Administrartor enters book title and author for editing
+Administrartor -> System: Edit Book Information request
 activate System
 
 alt Both title and author provided
@@ -18,27 +18,27 @@ alt Both title and author provided
     Database --> System: Book information
   deactivate Database
 
-  System --> User: Display book information for editing
-  User -> System: Provide updated book details
+  System --> Administrartor: Display book information for editing
+  Administrartor -> System: Provide updated book details
   System -> Database: Update book information
   activate Database
     Database --> System: Book information updated successfully
   deactivate Database
 
-  System --> User: Display success message
+  System --> Administrartor: Display success message
 
-  User -> System: Request related books
+  Administrartor -> System: Request related books
   System -> Database: Retrieve related books
   activate Database
     Database --> System: List of related books
   deactivate Database
 
-  System --> User: Display related books
+  System --> Administrartor: Display related books
 
 else Either title or author is missing
-  System --> User: Display error message
+  System --> Administrartor: Display error message
 end
 
-User -> System: Logout request
+Administrartor -> System: Logout request
 deactivate System
 @enduml

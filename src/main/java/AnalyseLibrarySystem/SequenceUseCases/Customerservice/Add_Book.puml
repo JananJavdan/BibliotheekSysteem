@@ -1,9 +1,9 @@
 @startuml
 
-actor User
+actor Administrartor
 
-note over User: User enters book title and author
-User -> System: Add Book request
+note over Administrartor: Administrartor enters book title and author
+Administrartor -> System: Add Book request
 activate System
 
 alt Both title and author provided
@@ -17,12 +17,12 @@ alt Both title and author provided
     Database --> System: Book added successfully
   deactivate Database
 
-  System --> User: Display success message
+  System --> Administrartor: Display success message
 else Either title or author is missing
-  System --> User: Display error message
+  System --> Administrartor: Display error message
 end
 
-User -> System: Logout request
+Administrartor -> System: Logout request
 deactivate System
 
 @enduml

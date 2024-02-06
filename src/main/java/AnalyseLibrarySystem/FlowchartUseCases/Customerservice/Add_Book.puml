@@ -1,17 +1,17 @@
 
 @startuml
 start
-:User enters book title and author;
+:Administrator enters book title and author;
 if (Both title and author provided?) then (Yes)
   :Check if book already exists in the database;
   if (Not exist) then (Yes)
     :Add book to the library database;
-    :Display success message: "Book added successfully!";
+    :Return success message: "Book added successfully!";
   else (Exist)
-    :Display error message: "Book already exists in the library.";
+    :Return error message: "Book already exists in the library.";
   endif
 else (No)
-  :Display error message: "Invalid input. Title and author are required.";
+  :Return error message: "Invalid input. Title and author are required.";
 endif
 stop
 @enduml

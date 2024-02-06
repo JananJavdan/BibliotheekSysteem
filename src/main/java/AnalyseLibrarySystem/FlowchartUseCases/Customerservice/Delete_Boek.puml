@@ -1,16 +1,16 @@
 @startuml
 start
-:User enters book title and author for removal;
+:Administrator enters book title and author for removal;
 if (Both title and author provided?) then (Yes)
   :Check if book exists in the database;
   if (Exist) then (Yes)
     :Remove book from the library database;
-    :Display success message: "Book removed successfully!";
+    :Return success message: "Book removed successfully!";
   else (No)
-    :Display error message: "Book not found in the library.";
+    :Return error message: "Book not found in the library.";
   endif
 else (No)
-  :Display error message: "Invalid input. Title and author are required.";
+  :Return error message: "Invalid input. Title and author are required.";
 endif
 stop
 @enduml

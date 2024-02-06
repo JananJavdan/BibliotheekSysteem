@@ -4,23 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b3dacd5-2220-4f33-be7e-717ca7edb20a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/FlowchartUseCases/Gebruiker/AbonnementFlowChart.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/FlowchartUseCases/Gebruiker/BoekTerugkrijgenFlowChart.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/FlowchartUseCases/Gebruiker/BoekZoekenFlowChart.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/FlowchartUseCases/Gebruiker/BoekleningFlowChart.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/FlowchartUseCases/Gebruiker/InloggenFlowChart.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/SequenceUseCases/Gebruiker/AbonnementSequence.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/SequenceUseCases/Gebruiker/BoekLeningSequence.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/SequenceUseCases/Gebruiker/BoekTerugKrijgenSequence.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/SequenceUseCases/Gebruiker/BoekZoekenSequence.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/SequenceUseCases/Gebruiker/InloggenSequence.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseBibliotheekSystem/Usecase_Bibliotheek.puml" afterDir="false" />
+    <list default="true" id="3b3dacd5-2220-4f33-be7e-717ca7edb20a" name="Changes" comment="Add file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/LibraryUML.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Add_Book.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Add_Book.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Delete_Boek.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Delete_Boek.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Edite_Information.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Edite_Information.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Loggin.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Customerservice/Loggin.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Libraryservice/Book_ManageFlowChart.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Libraryservice/Book_ManageFlowChart.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Libraryservice/Library_FunctionalityFlowChart.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Libraryservice/Library_FunctionalityFlowChart.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Libraryservice/RegistrationFlowChart.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/FlowchartUseCases/Libraryservice/RegistrationFlowChart.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Add_Book.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Add_Book.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Delete_Book.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Delete_Book.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Edite_Information.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Edite_Book_Information.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Loggin.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Customerservice/Loggin.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/Book_ManageSequence.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/Book_ManageSequence.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/Library_FunctionalitySequence.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/Library_FunctionalitySequence.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/RegistrationSequence.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/RegistrationSequence.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/User_ManageSequence.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/SequenceUseCases/Libraryservice/User_ManageSequence.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/Usecase_Bibliotheek.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/Usecase_Bibliotheek.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,14 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\intec\MavenProjects\BibliotheekSysteem\src\main\java\AnalyseBibliotheekSystem\SequenceUseCases\Klantenservice" />
+      <recent name="C:\Users\intec\MavenProjects\BibliotheekSysteem\src\main\java\AnalyseBibliotheekSystem\FlowchartUseCases\Klantenservice" />
+      <recent name="C:\Users\intec\MavenProjects\BibliotheekSysteem\src\main\java\AnalyseBibliotheekSystem\SequenceUseCases\Bibliotheekservice" />
+      <recent name="C:\Users\intec\MavenProjects\BibliotheekSysteem\src\main\java\AnalyseBibliotheekSystem\FlowchartUseCases\Bibliotheekservice" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -70,6 +80,35 @@
       <option name="presentableId" value="Default" />
       <updated>1707212597923</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1707222385491</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707222385491</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1707222409579</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707222409579</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1707227441874</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707227441874</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add file" />
   </component>
 </project>

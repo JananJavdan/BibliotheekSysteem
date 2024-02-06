@@ -1,35 +1,35 @@
 @startuml
-actor User
+actor SystemService
 participant "Bibliotheekservice" as BibService
 
-User -> BibService: Select user management function
+SystemService -> BibService: Select user management function
 activate BibService
 BibService -> BibService: Check selected function
 alt Enroll new user
-  BibService -> User: Provide user details
+  BibService -> SystemService: Provide user details
   BibService -> BibService: Add user to database
-  BibService -> User: Notify about successful enrollment
+  BibService -> SystemService: Notify about successful enrollment
 else Remove user
-  BibService -> User: Select user to remove
-  BibService -> User: Confirm removal
+  BibService -> SystemService: Select user to remove
+  BibService -> SystemService: Confirm removal
   BibService -> BibService: Remove user from database
-  BibService -> User: Notify about successful removal
+  BibService -> SystemService: Notify about successful removal
 else Block user
-  BibService -> User: Select user to block
-  BibService -> User: Confirm blocking
+  BibService -> SystemService: Select user to block
+  BibService -> SystemService: Confirm blocking
   BibService -> BibService: Block user account
-  BibService -> User: Notify about successful blocking
+  BibService -> SystemService: Notify about successful blocking
 else Freeze subscription
-  BibService -> User: Select user to freeze subscription
-  BibService -> User: Confirm freezing
+  BibService -> SystemService: Select user to freeze subscription
+  BibService -> SystemService: Confirm freezing
   BibService -> BibService: Freeze user's subscription
-  BibService -> User: Notify about successful freezing
+  BibService -> SystemService: Notify about successful freezing
 else Reset password
-  BibService -> User: Select user to reset password
+  BibService -> SystemService: Select user to reset password
   BibService -> BibService: Reset user's password
-  BibService -> User: Notify about successful password reset
+  BibService -> SystemService: Notify about successful password reset
 else Invalid selection
-  BibService -> User: Notify about invalid selection
+  BibService -> SystemService: Notify about invalid selection
 end
 deactivate BibService
 @enduml
