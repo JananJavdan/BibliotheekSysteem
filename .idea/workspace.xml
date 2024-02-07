@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b3dacd5-2220-4f33-be7e-717ca7edb20a" name="Changes" comment="Add file" />
+    <list default="true" id="3b3dacd5-2220-4f33-be7e-717ca7edb20a" name="Changes" comment="Add file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/LibrarySystem/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LibrarySystem/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LibrarySystem/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LibrarySystem/DataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LibrarySystem/LibraryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LibrarySystem/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/LibrarySystem/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/LibraryUML.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AnalyseLibrarySystem/LibraryUML.puml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,29 +24,31 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="UML Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2bzKivDLFTCQU3CvZzMyhCbTu5k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\intec\MavenProjects\BibliotheekSysteem\src\main\java\AnalyseBibliotheekSystem\SequenceUseCases\Klantenservice" />
@@ -101,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707231422643</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add file">
+      <option name="closed" value="true" />
+      <created>1707293172113</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707293172113</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
