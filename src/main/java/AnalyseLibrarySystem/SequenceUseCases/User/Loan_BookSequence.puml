@@ -1,0 +1,34 @@
+
+
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+
+activate User
+User -> LibrarySystem: Asks to borrow a book
+activate DataBase
+
+LibrarySystem -> LibrarySystem: Checks if book is available
+alt Book available? (yes)
+     DataBase -> DataBase: Borrow a book
+     DataBase -> DataBase: Loan book to user
+     alt (Successful?)
+         DataBase -> User: Message "Book checked out successfully"
+     else (no)
+         DataBase -> User: Message "Book could not be checked out"
+     end
+else (no)
+     LibrarySystem -> User: "Book Not Available" Message
+end
+
+deactivate DataBase
+deactivate User
+@enduml
+
+
+@startuml
+actor User
+participant "Library System" as LS
+User -> LS: Enter the title of the book you want to borrow
+LS --> User: Book successfully borrowed / The book is unavailable or not found
+@enduml

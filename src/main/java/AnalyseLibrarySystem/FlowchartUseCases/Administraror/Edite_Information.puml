@@ -1,0 +1,33 @@
+
+@startuml
+:Administrator enters book title and author for editing;
+if (Both title and author provided?) then (Yes)
+  :Check if book exists in the database;
+  if (Exist) then (Yes)
+    :Retrieve book information;
+    :Return book information for editing;
+    :User provides updated book details;
+    :Update book information in the database;
+    :Return success message;
+    :User requests related books;
+    :Retrieve related books;
+    :Return related books;
+  else (No)
+    :Return error message: "Book not found in the database.";
+  endif
+else (No)
+  :Return error message: "Invalid input. Title and author are required.";
+endif
+:User logs out;
+@enduml
+
+
+
+@startuml
+start
+:Enter the title of the book to edit;
+:Enter the new title of the book;
+:Enter the new author of the book;
+:Book information successfully edited;
+stop
+@enduml

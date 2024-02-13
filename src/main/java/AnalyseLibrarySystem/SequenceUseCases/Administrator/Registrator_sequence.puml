@@ -1,0 +1,8 @@
+@startuml
+actor Admin
+participant "Library System" as LS
+Admin -> LS: Enter new admin username
+Admin -> LS: Enter new admin password
+Admin -> LS: Confirm password
+LS --> Admin: Admin successfully registered / Passwords do not match
+@enduml

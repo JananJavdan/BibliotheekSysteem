@@ -1,0 +1,68 @@
+@startuml
+start
+:SystemService selects book management function;
+if (Selected function is Move book to another category?) then (yes)
+  :SystemService selects book to move;
+  :SystemService selects target category;
+  :Move book to target category;
+  :Notify user about successful move;
+elseif (Selected function is Restore book?) then (yes)
+  :SystemService selects book to restore;
+  :Check book condition;
+  if (Book condition is restoreable?) then (yes)
+    :Restore book;
+    :Notify user about successful restoration;
+  else (no)
+    :Notify user about inability to restore book;
+  endif
+elseif (Selected function is Add book information?) then (yes)
+  :SystemService selects book to add information to;
+  :SystemService provides additional information;
+  :Update book information in database;
+  :Notify user about successful update;
+elseif (Selected function is Mark book?) then (yes)
+  :SystemService selects book to mark;
+  :Mark book with library stamp;
+  :Notify user about successful marking;
+elseif (Selected function is Calculate book popularity?) then (yes)
+  :Calculate popularity of each book;
+  :Display popularity ranking of books;
+else
+  :Notify user about invalid selection;
+endif
+stop
+@enduml
+@startuml
+start
+:SystemService selects book management function;
+if (Selected function is Move book to another category?) then (yes)
+  :SystemService selects book to move;
+  :SystemService selects target category;
+  :Move book to target category;
+  :Notify user about successful move;
+elseif (Selected function is Restore book?) then (yes)
+  :SystemService selects book to restore;
+  :Check book condition;
+  if (Book condition is restoreable?) then (yes)
+    :Restore book;
+    :Notify user about successful restoration;
+  else (no)
+    :Notify user about inability to restore book;
+  endif
+elseif (Selected function is Add book information?) then (yes)
+  :SystemService selects book to add information to;
+  :SystemService provides additional information;
+  :Update book information in database;
+  :Notify user about successful update;
+elseif (Selected function is Mark book?) then (yes)
+  :SystemService selects book to mark;
+  :Mark book with library stamp;
+  :Notify user about successful marking;
+elseif (Selected function is Calculate book popularity?) then (yes)
+  :Calculate popularity of each book;
+  :Display popularity ranking of books;
+else
+  :Notify user about invalid selection;
+endif
+stop
+@enduml

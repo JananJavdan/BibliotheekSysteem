@@ -1,0 +1,33 @@
+@startuml
+start
+:Gebruiker vraagt om een boek terug te brengen;
+:Scan het terug te brengen boek;
+if (Boek correct?) then (Ja)
+  :Boek terug inleveren;
+  if (Succesvol?) then (Ja)
+    :Bericht "Boek succesvol teruggebracht" tonen;
+  else (Nee)
+    :Bericht "Boek kon niet worden teruggebracht" tonen;
+  endif
+else (Nee)
+  :Bericht "Ongeldig boek" tonen;
+endif
+stop
+@enduml
+
+@startuml
+Start
+:User asks to return a book;
+:Scan the book to be returned;
+if (Book correct?) then (Yes)
+   :Return book;
+   if (Successful?) then (Yes)
+     :Show "Book returned successfully" message;
+   else (No)
+     :Show "Book could not be returned" message;
+   endif
+else (No)
+   :Show "Invalid book" message;
+endif
+Stop
+@enduml

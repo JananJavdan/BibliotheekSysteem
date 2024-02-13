@@ -1,0 +1,34 @@
+
+
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+
+activate User
+User -> LibrarySystem: Requests to return a book
+activate DataBase
+
+DataBase -> DataBase: Scan the book to be returned
+alt (Book correct?) then (Yes)
+     DataBase -> DataBase: Return book
+     alt (Successful?) then (Yes)
+         LibrarySystem -> User: "Book Returned Successfully" Message
+     else (No)
+         LibrarySystem -> User: "Book could not be returned" message
+     end
+else (No)
+     LibrarySystem -> User: "Invalid Book" Message
+end
+
+deactivate DataBase
+deactivate User
+@enduml
+
+
+
+@startuml
+actor User
+participant "Library System" as LS
+User -> LS: Enter the title of the book you want to return
+LS --> User: Book successfully returned / The book was not borrowed by you or not found
+@enduml

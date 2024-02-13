@@ -1,0 +1,31 @@
+
+
+
+@startuml
+Start
+:User asks to borrow a book;
+if (Book available?) then (Yes)
+   :Borrow a book;
+   :Lend book to user;
+   if (Successful?) then (Yes)
+     :Show "Book successfully checked out" message;
+   else (No)
+     :Show message "Book could not be borrowed";
+   endif
+else (No)
+   :Show "Book not available" message;
+endif
+Stop
+@enduml
+
+
+@startuml
+start
+:Enter the title of the book you want to borrow;
+if (Book is available?) then (yes)
+    :Book successfully borrowed;
+else (no)
+    :The book is unavailable or not found;
+endif
+stop
+@enduml

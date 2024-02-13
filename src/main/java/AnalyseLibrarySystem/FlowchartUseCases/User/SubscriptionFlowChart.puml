@@ -1,0 +1,34 @@
+
+
+
+@startuml
+Start
+:User requests a subscription;
+if (Request subscription?) then (Yes)
+   :Request user information;
+   :Process subscription request;
+   if (Successful?) then (Yes)
+     :Show message "Subscription successfully created";
+   else (No)
+     :Show message "Subscription could not be created";
+   endif
+else (No)
+   :Show available subscription options;
+endif
+Stop
+@enduml
+
+
+
+@startuml
+start
+:Enter new username;
+:Enter new password;
+:Confirm password;
+if (Passwords match?) then (yes)
+    :User successfully registered;
+else (no)
+    :Passwords do not match;
+endif
+stop
+@enduml

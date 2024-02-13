@@ -1,0 +1,28 @@
+
+
+
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+
+activate User
+User -> LibrarySystem: Asks to find a book
+activate DataBase
+
+LibrarySystem -> LibrarySystem: Enter the title of the book
+alt (Book found?) then (Yes)
+     LibrarySystem -> User: Show book information
+else (No)
+     DataBase -> User: Show message "Book not found"
+end
+
+deactivate DataBase
+deactivate User
+@enduml
+
+@startuml
+actor User
+participant "Library System" as LS
+User -> LS: Enter the title of the book to search
+LS --> User: Display book details / Book with this title not found
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+actor Administrartor
+participant "LibrarySystem" as LibrarySystem
+
+activate Administrartor
+Administrartor -> LibrarySystem: Click on "Login"
+activate Librarysystem
+
+LibrarySystem -> LibrarySystem: Enter username and password
+     alt (Login details correct?)
+     Librarysystem -> Administrartor: Administrartor logged in
+     LibrarySystem -> Administrartor: Show welcome message
+else (No)
+     Librarysystem -> Administrartor: Show error message "Incorrect login details"
+end
+
+deactivate Librarysystem
+deactivate Administrartor
+@enduml
+
+@startuml
+actor Admin
+participant "Library System" as LS
+Admin -> LS: Enter admin username
+Admin -> LS: Enter admin password
+LS --> Admin: Admin login successful / Admin login error
+@enduml

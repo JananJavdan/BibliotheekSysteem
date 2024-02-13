@@ -1,0 +1,42 @@
+
+
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+participant "UserInformation" as UserInformation
+
+activate User
+User -> LibrarySystem: Requests a subscription
+activate DataBase
+
+LibrarySystem -> LibrarySystem: Checks whether subscription\nrequest received
+alt Request subscription
+     LibrarySystem -> LibrarySystem: Requests user information
+     activate Userinformation
+     LibrarySystem --> UserInformation: Collect user information
+     UserInformation -> LibrarySystem: Sends user information
+     deactivate Userinformation
+     LibrarySystem -> LibrarySystem: Processes subscription request
+
+     alt Successful processing
+         DataBase -> User: Message "Subscription successfully created"
+     else Subscription could not be created
+         LibrarySystem -> User: Message "Subscription could not be created"
+     end
+else Do not request a subscription
+     LibrarySystem -> User: Shows available subscription options
+end
+
+deactivate DataBase
+deactivate User
+@enduml
+
+
+@startuml
+actor User
+participant "Library System" as LS
+User -> LS: Enter new username
+User -> LS: Enter new password
+User -> LS: Confirm password
+LS --> User: User successfully registered / Passwords do not match
+@enduml

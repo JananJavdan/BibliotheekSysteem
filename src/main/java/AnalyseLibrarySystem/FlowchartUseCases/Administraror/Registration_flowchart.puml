@@ -1,0 +1,12 @@
+@startuml
+start
+:Enter new admin username;
+:Enter new admin password;
+:Confirm password;
+if (Passwords match?) then (yes)
+    :Admin successfully registered;
+else (no)
+    :Passwords do not match;
+endif
+stop
+@enduml

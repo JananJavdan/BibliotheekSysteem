@@ -1,0 +1,33 @@
+@startuml
+start
+:Gebruiker vraagt om een abonnement;
+if (Abonnement aanvragen?) then (Ja)
+  :Vraag gebruikersinformatie;
+  :Verwerk abonnementsaanvraag;
+  if (Succesvol?) then (Ja)
+    :Bericht "Abonnement succesvol aangemaakt" tonen;
+  else (Nee)
+    :Bericht "Abonnement kon niet worden aangemaakt" tonen;
+  endif
+else (Nee)
+  :Toon beschikbare abonnementsopties;
+endif
+stop
+@enduml
+
+@startuml
+Start
+:User requests a subscription;
+if (Request subscription?) then (Yes)
+   :Request user information;
+   :Process subscription request;
+   if (Successful?) then (Yes)
+     :Show message "Subscription successfully created";
+   else (No)
+     :Show message "Subscription could not be created";
+   endif
+else (No)
+   :Show available subscription options;
+endif
+Stop
+@enduml

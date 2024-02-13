@@ -1,0 +1,19 @@
+@startuml
+start
+:SystemService requests to add a new book;
+if (Is SystemService authenticated?) then (yes)
+  :Prompt SystemService to enter book details;
+  :Add book to database;
+  :Notify SystemService about successful addition;
+else (no)
+  :Prompt SystemService to log in;
+  if (Is login successful?) then (yes)
+    :Prompt SystemService to enter book details;
+    :Add book to database;
+    :Notify SystemService about successful addition;
+  else (no)
+    :Notify SystemService about authentication failure;
+  endif
+endif
+stop
+@enduml

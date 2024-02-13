@@ -1,0 +1,54 @@
+
+@startuml
+Start
+:Administrator clicks "Login";
+:Enter username and password;
+if (Login details correct?) then (Yes)
+   :Administrator logged in;
+   :Show welcome message;
+else (No)
+   :Show error message "Incorrect login details";
+endif
+Stop
+@enduml
+
+
+@startuml
+start
+:Enter admin username;
+:Enter admin password;
+if (Username and password are correct?) then (yes)
+    :Admin login successful;
+else (no)
+    :Admin login error;
+endif
+stop
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

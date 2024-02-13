@@ -1,0 +1,37 @@
+@startuml
+
+actor Administrartor
+
+note over Administrartor: Administrartor enters book title and author
+Administrartor -> System: Add Book request
+activate System
+
+alt Both title and author provided
+  System -> Database: Check if book exists
+  activate Database
+    Database --> System: Not exist
+  deactivate Database
+
+  System -> Database: Add book
+  activate Database
+    Database --> System: Book added successfully
+  deactivate Database
+
+  System --> Administrartor: Display success message
+else Either title or author is missing
+  System --> Administrartor: Display error message
+end
+
+Administrartor -> System: Logout request
+deactivate System
+
+@enduml
+
+
+@startuml
+actor Admin
+participant "Library System" as LS
+Admin -> LS: Enter the title of the book
+Admin -> LS: Enter the author's name
+LS --> Admin: Book successfully added
+@enduml

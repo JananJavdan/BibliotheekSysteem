@@ -1,0 +1,135 @@
+@startuml
+left to right direction
+
+package "Library System" {
+  rectangle "User" as user {
+   :user1:
+  }
+  rectangle "Userscases" as usecases {
+    (Search Book) as search
+    (Back Book) as back
+    (Loan Book) as loen
+    (Loggin) as userloggin
+    (Subscribtion) as (subscribtion)
+
+  }
+  user ---> (search)
+  user --->(back)
+  user ---> (loen)
+  user ---> (userloggin)
+  user ---> (subscribtion)
+
+  rectangle "CostomerService" as customerservice {
+      :customerservice1:
+    }
+
+    rectangle "Userscases" as usecases {
+
+      (Edite Book Information) as (editebookinformation)
+      (Add Book) as addbook
+      (Delete Book) as deletebook
+
+
+    }
+
+    customerservice ---> (userloggin)
+    customerservice ---> (editebookinformation)
+    customerservice ---> (addbook)
+    customerservice --->  (deletebook)
+
+
+rectangle "LibraryService" as libraryservice {
+    :systemservice:
+  }
+
+  rectangle "Userscases" as usecases {
+
+    (Book Manage) as (bookmanage)
+    (User Manage) as (usermanage)
+     (Registration) as (registration)
+     (Library Functionality) as (libraryfunctionality)
+
+
+  }
+  libraryservice ---> (registration)
+
+  libraryservice ---> (bookmanage)
+  libraryservice ---> (usermanage)
+  libraryservice ---> (libraryfunctionality)
+
+@enduml
+
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor User
+actor Admin
+
+rectangle "Library System" {
+    User --> (Search for a book by title)
+    User --> (Borrow a book)
+    User --> (Return a book)
+    Admin --> (Add a book)
+    Admin --> (Delete a book)
+    Admin --> (Edit book information)
+
+
+@enduml
+
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor User
+actor Admin
+
+rectangle "Library System" {
+    User --> (Search for a book by title)
+    User --> (Borrow a book)
+    User --> (Return a book)
+    Admin --> (Add a book)
+    Admin --> (Delete a book)
+    Admin --> (Edit book information)
+    Admin --> (Login as Admin)
+    Admin --> (Add a book as Admin)
+    Admin --> (Delete a book as Admin)
+    Admin --> (Edit book information as Admin)
+    User --> (Register)
+    User --> (Login)
+    User --> (Search for a book by title)
+    CustomerService --> (Add a book)
+    CustomerService --> (Delete a book)
+    CustomerService --> (Edit book information)
+}
+
+@enduml
+@startuml
+
+actor User
+actor Admin
+
+
+left to right direction
+skinparam packageStyle rectangle
+
+rectangle "Library System" {
+    User --> (Login)
+    User --> (Register)
+    User --> (Search for a book by title)
+    User --> (Borrow a book)
+    User --> (Return a book)
+
+
+
+    Admin --> (Login as Admin)
+    Admin --> (Register As Admin)
+    Admin --> (Add a book as Admin)
+    Admin --> (Delete a book as Admin)
+    Admin --> (Edit book information as Admin)
+
+}
+
+@enduml

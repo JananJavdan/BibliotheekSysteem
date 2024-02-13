@@ -1,0 +1,31 @@
+
+
+@startuml
+actor User
+participant "LibrarySystem" as LibrarySystem
+
+activate User
+User -> LibrarySystem: Click on "Login"
+activate DataBase
+
+LibrarySystem -> LibrarySystem: Enter username and password
+     alt (Login details correct?)
+     DataBase -> User: User logged in
+     LibrarySystem -> User: Show welcome message
+else (No)
+     DataBase -> User: Show error message "Incorrect login details"
+end
+
+deactivate DataBase
+deactivate User
+@enduml
+
+
+
+@startuml
+actor User
+participant "Library System" as LS
+User -> LS: Enter username
+User -> LS: Enter password
+LS --> User: Login successful / Login error
+@enduml

@@ -1,0 +1,59 @@
+@startuml
+start
+:Enter the title of the book;
+:Enter the author's name;
+:Book successfully added;
+stop
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@startuml
+start
+:Administrator enters book title and author;
+if (Both title and author provided?) then (Yes)
+  :Check if book already exists in the database;
+  if (Not exist) then (Yes)
+    :Add book to the library database;
+    :Return success message: "Book added successfully!";
+  else (Exist)
+    :Return error message: "Book already exists in the library.";
+  endif
+else (No)
+  :Return error message: "Invalid input. Title and author are required.";
+endif
+stop
+@enduml
+@startuml
+start
+:Administrator enters book title and author;
+if (Both title and author provided?) then (Yes)
+  :Check if book already exists in the database;
+  if (Not exist) then (Yes)
+    :Add book to the library database;
+    :return success message: "Book added successfully!";
+  else (Exist)
+    :return error message: "Book already exists in the library.";
+  endif
+else (No)
+  :return error message: "Invalid input. Title and author are required.";
+endif
+stop
+@enduml
